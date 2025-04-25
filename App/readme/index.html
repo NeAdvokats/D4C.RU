@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+        <title>D4C.RU v23.040.1</title>
+    </head>
+    <body>
+        <header class="header-class">
+            <nav class="header-nav">
+                <ul class="nav-class">
+
+                    <li>
+                        <a href="../index.html" class="nav-link">Обход</a>
+                    </li>
+
+                    <li>
+                        <a href="../IP/index.html" class="nav-link">IP Адрес</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">README</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-class">
+            <div class="main-readme">
+                <p id="raw-content"></p>
+            </div>
+        </main>
+    </body>
+    <script>
+        const rawUrl = 'https://raw.githubusercontent.com/NeAdvokats/D4C.RU/refs/heads/main/README.md';
+        
+        fetch(rawUrl)
+            .then(response => {
+                if (!response.ok) throw new Error('Не удалось загрузить, очень тяжело...');
+                return response.text();
+            })
+            .then(text => {
+                const lines = text.split('\n');
+                const contentContainer = document.getElementById('raw-content');
+                
+                lines.forEach(line => {
+                    const lineElement = document.createElement('div');
+                    lineElement.textContent = line;
+                    contentContainer.appendChild(lineElement);
+                });
+            })
+            .catch(error => {
+                const errorElement = document.createElement('div');
+                errorElement.textContent = 'Братан, не смог я. ' + error.message;
+                document.getElementById('raw-content').appendChild(errorElement);
+            });
+    </script>
+</html>
