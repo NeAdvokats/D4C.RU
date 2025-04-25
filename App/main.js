@@ -8,7 +8,8 @@ function createWindow() {
     maxWidth: 380,
     maxHeight: 530,
     webPreferences: {
-
+      nodeIntegration: false,
+      contextIsolation: true,
     }
   });
   win.setMenu(null);
