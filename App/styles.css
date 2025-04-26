@@ -23,10 +23,8 @@ body::-webkit-scrollbar {
 }
 
 .version {
-    display: flex;
     margin: 20px;
     color: rgba(255, 255, 255, 0.25);
-    justify-content: center;
 }
 
 .main-list {
