@@ -33,7 +33,7 @@
                 <p>Наведитесь чтобы посмотреть свой IP-Адрес</p>
             </div>
             <a class="main-button" onclick="checkDiscord()">Проверить</a>
-            <span id="dc-result">cdn.discordapp.com : Неизвестно</span>
+            <span id="dc-result">discordapp.com : Неизвестно</span>
         </main> 
     </body>
 
@@ -57,11 +57,11 @@
             
             try {
                 const start = Date.now();
-                await fetch('https://cdn.discordapp.com/', {method: 'HEAD', mode: 'no-cors'});
+                await fetch('https://discordapp.com/', {method: 'HEAD', mode: 'no-cors'});
                 const time = Date.now() - start;
-                resultEl.innerHTML = `cdn.discordapp.com : Доступен (${time}мс)`;
+                resultEl.innerHTML = `discordapp.com : Доступен (${time}мс)`;
             } catch {
-                resultEl.innerHTML = 'cdn.discordapp.com : Заблокирован';
+                resultEl.innerHTML = 'discordapp.com : Заблокирован';
             }
             }
       </script>
