@@ -8,7 +8,7 @@ The name **D4C** was not chosen randomly. Much like the ability from _JoJo's Biz
 Funny example:  
 _"Do you want to stay in the censored segment of Runet or cross over into a world without blocks?"_
 
-## Unfortunately, my JavaScript skills are completely nonexistent, so all scripts were written by others
+# Unfortunately, my JavaScript skills are completely nonexistent, so all scripts were written by others
 This README.md is used in the program as a separate tab.
 
 **The program does not work.**
@@ -16,3 +16,22 @@ This README.md is used in the program as a separate tab.
 There may be **"technical debt"** in the code. This was made by an inexperienced developer, so if you encounter poorly written code or markup, just ignore it.
 
 I'll fix it soon!
+
+# Installation
+
+Prerequisites: Install Node.js (includes npm).
+
+Clone the repository:
+```bash
+git clone https://github.com/NeAdvokats/D4C.RU.git
+cd D4C.RU-main
+cd App
+```
+Install dependencies:
+```bash
+npm install
+```
+Run the app:
+```bash
+npm start
+```
