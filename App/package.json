@@ -7,7 +7,7 @@
   },
   "keywords": [],
   "author": "NeAdvokat",
-  "license": "ISC",
+  "license": "MIT",
   "description": "Only I... only I can move freely between worlds! You lot are just 'guests' stuck here!",
   "devDependencies": {
     "electron": "^35.2.0"
