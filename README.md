@@ -1,4 +1,4 @@
-# D4C.RU v23.040.1
+# D4C.RU v27.043.2
 [По-русски](https://github.com/NeAdvokats/D4C.RU/blob/main/README_ru.md)
 
 This project was initially conceived as a fork of the [Zapret](https://github.com/bol-van/zapret) repository, but during development it evolved into a standalone application. The first development phase is now complete - a basic structure and Electron-based interface have been created. However, it's important to note: **the current version is not yet functional.**
