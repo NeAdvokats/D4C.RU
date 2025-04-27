@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" href="../stylesheets/styles.css">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+        <title>D4C.RU</title>
+    </head>
+    <body>
+        <header class="header-class">
+            <nav class="header-nav">
+                <ul class="nav-class">
+                    <li>
+                        <a href="../main-window/index.html" class="nav-link">Обход</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">IP Адрес</a>
+                    </li>
+
+                    <li>
+                        <a href="../readme-window/index.html" class="nav-link">README</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-class">
+            <h1 class="main-catalog">Информация IP</h1>
+            <p class="main-description">Здесь Вы можете посмотреть IP, Проверка блокировки.</p>
+            <div class="main-net">
+                <h1 id="raw-content" class="main-ip">Загрузка...</h1>
+                <p>Наведитесь чтобы посмотреть свой IP-Адрес</p>
+            </div>
+            <span id="dc-result">Discord : Неизвестно</span>
+            <a class="main-button" style="font-size: 1rem;" onclick="checkDiscord()">Проверить DS</a>
+            <span id="yt-result">YouTube : Неизвестно</span>
+            <a class="main-button" style="font-size: 1rem;" onclick="checkYouTube()">Проверка YT</a>
+            <p class="main-description">Если загрузка долгая = либо проблемы со скоростью интернета, либо Вы ещё не включили обход.</p>
+        </main> 
+    </body>
+
+    <script>
+        const rawUrl = 'https://api.ipify.org?format=raw';
+        fetch(rawUrl)
+          .then(response => {
+            if (!response.ok) throw new Error('Не удалось загрузить, очень тяжело...');
+            return response.text();
+          })
+          .then(text => {
+            document.getElementById('raw-content').textContent = text;
+          })
+          .catch(error => {
+            document.getElementById('raw-content').textContent = 'Братан, не смог я.  ' + error.message;
+          });
+
+        async function checkDiscord() {
+            const resultEl = document.getElementById('dc-result');
+            resultEl.innerHTML = 'Проверяем Discord...';
+            
+            try {
+                const start = Date.now();
+                await fetch('https://stable.dl2.discordapp.net/', {method: 'HEAD', mode: 'no-cors'});
+                const time = Date.now() - start;
+                resultEl.innerHTML = `Discord : Доступен (${time}мс)`;
+            } catch {
+                resultEl.innerHTML = 'Discord : Заблокирован';
+            }
+        }
+        async function checkYouTube() {
+            const resultEl = document.getElementById('yt-result');
+            resultEl.innerHTML = 'Проверяем YouTube...';
+            
+            try {
+                const start = Date.now();
+                await fetch('https://youtube.com', {method: 'HEAD', mode: 'no-cors'});
+                const time = Date.now() - start;
+                resultEl.innerHTML = `YouTube : Доступен (${time}мс)`;
+            } catch {
+                resultEl.innerHTML = 'YouTube : Заблокирован';
+            }
+        }
+      </script>
+</html>

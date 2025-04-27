@@ -1,0 +1,15 @@
+{
+  "name": "d4c-ru",
+  "version": "27.041.1",
+  "main": "core/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "NeAdvokat",
+  "license": "MIT",
+  "description": "Only I... only I can move freely between worlds! You lot are just 'guests' stuck here!",
+  "devDependencies": {
+    "electron": "^35.2.0"
+  }
+}
