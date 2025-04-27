@@ -23,7 +23,6 @@ Clone the repository:
 ```bash
 git clone https://github.com/NeAdvokats/D4C.RU.git
 cd D4C.RU-main
-cd App
 ```
 Install dependencies:
 ```bash
