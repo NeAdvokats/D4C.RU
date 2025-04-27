@@ -1,6 +1,6 @@
 {
   "name": "d4c-ru",
-  "version": "27.041.1",
+  "version": "27.043.2",
   "main": "core/main.js",
   "scripts": {
     "start": "electron ."
