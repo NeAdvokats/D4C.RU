@@ -1,3 +1,6 @@
+
+ЗАКРЫТ ПО ПРИЧИНАМ : говнокод
+
 # D4C.RU v27.043.2
 [По-русски](https://github.com/NeAdvokats/D4C.RU/blob/main/README_ru.md)
 
